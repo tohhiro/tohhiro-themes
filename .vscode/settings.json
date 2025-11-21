@@ -1,0 +1,22 @@
+{
+    "php.executablePath": "/usr/local/bin/php",
+    "php.validate.executablePath": "/usr/local/bin/php",
+    "[php]": {
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.fixAll": "explicit"
+        },
+        "editor.defaultFormatter": "junstyle.php-cs-fixer"
+    },
+    "php-cs-fixer.executablePath": "./vendor/bin/php-cs-fixer",
+    "php-cs-fixer.onsave": true,
+    "intelephense.format.enable": true,
+    "intelephense.stubs": [
+        "wordpress"
+    ],
+    "intelephense.environment.includePaths": [
+        "./vendor/php-stubs/wordpress-stubs"
+    ],
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true
+}
