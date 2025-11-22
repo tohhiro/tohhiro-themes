@@ -23,5 +23,7 @@ return (new Config())
         'trailing_comma_in_multiline' => true,
     ])
     ->setFinder(
-        Finder::create()->exclude('vendor')->in([__DIR__])
+        Finder::create()
+            ->exclude('vendor')
+            ->in(__DIR__)
     );
