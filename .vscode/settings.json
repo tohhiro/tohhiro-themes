@@ -16,5 +16,6 @@
     "./vendor/php-stubs/wordpress-stubs"
   ],
   "files.trimTrailingWhitespace": true,
-  "files.insertFinalNewline": true
+  "files.insertFinalNewline": true,
+  "intelephense.diagnostics.typeErrors": false
 }
