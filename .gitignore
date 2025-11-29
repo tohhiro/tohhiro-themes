@@ -1,15 +1,5 @@
-# WordPress core
-wp-admin/
-wp-includes/
-!.github/
+# Composer dependencies
+vendor/
 
-# logs
-*.log
-
-# uploads
-wp-content/uploads/
-
-# configs
-wp-config.php
-
-wp-content/plugins/
+# OS files
+.DS_Store
