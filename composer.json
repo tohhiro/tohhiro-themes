@@ -3,6 +3,9 @@
   "description": "WordPress themes development tools",
   "type": "project",
   "license": "proprietary",
+  "require": {
+    "php": ">=8.4"
+  },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.0",
     "friendsofphp/php-cs-fixer": "^3.0",

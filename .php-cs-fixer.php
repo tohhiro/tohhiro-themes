@@ -25,5 +25,5 @@ return (new Config())
     ->setFinder(
         Finder::create()
             ->exclude('vendor')
-            ->in(__DIR__)
+            ->in([__DIR__ . '/jin-child'])
     );
