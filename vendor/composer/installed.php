@@ -3,7 +3,7 @@
         'name' => 'tohhiro/themes',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '74ce73f9ea4f179b0442b9530b1bec6de9933daa',
+        'reference' => '7f4efe757d3afac6a4382f95ee33486b66bbecf9',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -400,7 +400,7 @@
         'tohhiro/themes' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '74ce73f9ea4f179b0442b9530b1bec6de9933daa',
+            'reference' => '7f4efe757d3afac6a4382f95ee33486b66bbecf9',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

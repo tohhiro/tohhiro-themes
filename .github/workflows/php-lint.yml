@@ -1,0 +1,41 @@
+name: PHP Lint
+
+on:
+    push:
+        branches: [main]
+    pull_request:
+        branches: [main]
+
+jobs:
+    php-lint:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v4
+
+            - name: Setup PHP
+              uses: shivammathur/setup-php@v2
+              with:
+                  php-version: "8.4"
+                  tools: composer
+
+            - name: Validate composer.json
+              run: composer validate --strict
+
+            - name: Cache Composer packages
+              uses: actions/cache@v3
+              with:
+                  path: vendor
+                  key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+                  restore-keys: |
+                      ${{ runner.os }}-composer-
+
+            - name: Install dependencies
+              run: composer install --prefer-dist --no-progress
+
+            - name: Run PHP_CodeSniffer
+              run: ./vendor/bin/phpcs --standard=PSR12 --extensions=php jin-child/
+              continue-on-error: true
+
+            - name: Run PHP CS Fixer (dry-run)
+              run: ./vendor/bin/php-cs-fixer fix --dry-run --diff --verbose
